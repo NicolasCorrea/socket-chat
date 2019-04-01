@@ -12,8 +12,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
-// IO = esta es la comunicacion del backend
-module.exports.io = socketIO(server,{wsEngine : 'ws'});
+// IO = esta es la comunicacion del backend ,{wsEngine : 'ws'}
+module.exports.io = socketIO(server);
 require('./sockets/socket');
 
 
